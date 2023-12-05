@@ -23,7 +23,6 @@ app.post('/users', async (request, response) => {
 
 app.post('/login', async (request, response) => {
     const user = users.find(user => user.name == request.body.name)
-    console.log("0", user);
     if (user == null) {
         response.status(400).send({ status: "false 1" })
     }
